@@ -11,6 +11,7 @@ from fastapi.responses import JSONResponse
 
 from schemas.requests import AgentFitRequest, TranslateRequest
 from services.model_manager import _cpu_pool, _gpu_pool
+from utils.unspaced_scripts import tidy_unspaced_script
 from services.hf_revisions import revision_for
 from services.model_acceptance import ModelLicenceNotAccepted
 from services.translator import (
@@ -953,7 +954,9 @@ async def dub_translate(req: TranslateRequest):
                         translated_text = (
                             seg.text
                             if from_code == to_code
-                            else argostranslate.translate.translate(seg.text, from_code, to_code)
+                            else tidy_unspaced_script(
+                                argostranslate.translate.translate(seg.text, from_code, to_code)
+                            )
                         )
                         results.append({"id": seg.id, "text": translated_text})
                     except Exception as e:
