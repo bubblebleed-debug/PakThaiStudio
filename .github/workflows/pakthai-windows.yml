@@ -1,12 +1,13 @@
 name: PakThai Studio - Windows installer
 
-# Builds the Windows (x64) installer. Run it from the Actions tab
-# ("Run workflow"), or push a tag like v0.5.8-pakthai.1 to also publish a
-# GitHub Release that the in-app updater can find.
+# Builds the Windows (x64) installer on every push to main (or "Run workflow"
+# in the Actions tab) and publishes it as the GitHub Release for the version in
+# package.json, which the in-app updater reads.
 on:
   workflow_dispatch:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths-ignore: ['**.md']
 
 permissions:
   contents: write
@@ -73,10 +74,15 @@ jobs:
             electron/release/*.yml
             electron/release/*.blockmap
           retention-days: 14
-      - name: Publish GitHub Release (tags only)
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Publish GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" electron/release/*.exe electron/release/*.yml electron/release/*.blockmap \
-            --title "PakThai Studio $GITHUB_REF_NAME" --notes "PakThai Studio for Windows (x64)."
+          tag="v$(node -p "require('./package.json').version")"
+          files=(electron/release/*.exe electron/release/*.yml electron/release/*.blockmap)
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "${files[@]}" --clobber
+          else
+            gh release create "$tag" "${files[@]}" --target "$GITHUB_SHA" \
+              --title "PakThai Studio $tag" --notes "PakThai Studio for Windows (x64). Download the .exe below and run it to install."
+          fi
