@@ -1,0 +1,9 @@
+{
+  "productName": "PakThai Studio",
+  "appId": "com.pakthai.studio",
+  "ports": {
+    "backend": 3910,
+    "web": 3911,
+    "electronDev": 3912
+  }
+}

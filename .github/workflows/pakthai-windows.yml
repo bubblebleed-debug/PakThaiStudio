@@ -1,0 +1,82 @@
+name: PakThai Studio - Windows installer
+
+# Builds the Windows (x64) installer. Run it from the Actions tab
+# ("Run workflow"), or push a tag like v0.5.8-pakthai.1 to also publish a
+# GitHub Release that the in-app updater can find.
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  omnivoice-tts:
+    uses: ./.github/workflows/build-omnivoice-tts.yml
+    with:
+      desktop: true
+      retention_days: 3
+
+  windows:
+    needs: omnivoice-tts
+    runs-on: windows-2022
+    timeout-minutes: 90
+    defaults:
+      run:
+        shell: bash
+    env:
+      VOICESTUDIO_RUST_TARGET: x86_64-pc-windows-msvc
+      VOICESTUDIO_OMNIVOICE_TTS_PLATFORM: windows-x86_64
+      VOICESTUDIO_UPDATE_CHANNEL: electron-stable-win32-x64
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: '1.4.2'
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: native/desktop-bridge -> target
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.12.13'
+          enable-cache: false
+      - name: Bundle pinned uv
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node electron/scripts/stage-bundled-uv.mjs
+      - name: Stage the OmniVoice GGUF runtime
+        uses: actions/download-artifact@v4
+        with:
+          name: omnivoice-tts-windows-x86_64
+          path: electron/build/omnivoice-tts
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+      - name: Build app
+        run: bun run --cwd electron build
+      - name: Package installer
+        working-directory: electron
+        run: bun x electron-builder --config electron-builder.config.mjs --win --x64 --publish never
+      - name: Upload installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: PakThai-Studio-Windows
+          path: |
+            electron/release/*.exe
+            electron/release/*.yml
+            electron/release/*.blockmap
+          retention-days: 14
+      - name: Publish GitHub Release (tags only)
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" electron/release/*.exe electron/release/*.yml electron/release/*.blockmap \
+            --title "PakThai Studio $GITHUB_REF_NAME" --notes "PakThai Studio for Windows (x64)."
