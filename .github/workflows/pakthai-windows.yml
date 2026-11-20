@@ -65,7 +65,7 @@ jobs:
         working-directory: electron
         run: bun x electron-builder --config electron-builder.config.mjs --win --x64 --publish never
       - name: Upload installer
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: PakThai-Studio-Windows
           path: |
