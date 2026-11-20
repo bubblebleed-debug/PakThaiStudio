@@ -823,7 +823,7 @@ async def dub_generate(job_id: str, req: DubRequest):
                     from services.director import parse as _parse_direction
 
                     direction = _parse_direction(direction_text)
-                    extra = direction.instruct_prompt()
+                    extra = direction.tts_instruct()
                     if extra:
                         instruct = f"{instruct}, {extra}" if instruct else extra
                     bias = direction.rate_bias()
@@ -1340,7 +1340,7 @@ async def dub_generate(job_id: str, req: DubRequest):
                 try:
                     from services.director import parse as _parse_direction
                     d = _parse_direction(seg_direction)
-                    extra_instruct = d.instruct_prompt()
+                    extra_instruct = d.tts_instruct()
                     if extra_instruct:
                         seg_instruct = (
                             f"{seg_instruct}, {extra_instruct}" if seg_instruct else extra_instruct

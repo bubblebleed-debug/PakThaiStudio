@@ -370,7 +370,7 @@ export function ConvertVoice() {
             <h3 className="text-sm font-medium">{t('convert.result_kicker')}</h3>
             <SaveAudioButton
               url={apiPath(result.video_url ?? result.audio_url)}
-              suggestedName={`voicestudio-${result.id}${result.video_url ? (/\.\w+$/.exec(result.video_url)?.[0] ?? '.mp4') : '.wav'}`}
+              suggestedName={`pakthai-${result.id}${result.video_url ? (/\.\w+$/.exec(result.video_url)?.[0] ?? '.mp4') : '.wav'}`}
             />
           </div>
           {result.video_url ? (

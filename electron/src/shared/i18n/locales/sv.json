@@ -99,7 +99,7 @@
     "brand_by": "{{brand}} av",
     "all": "Alla",
     "allContributors": "Alla bidragsgivare",
-    "title": "VoiceStudio.sh Öppen källkod",
+    "title": "PakThai Studio Öppen källkod",
     "design": "Skapa en röst utifrån en beskrivning.",
     "dub": "Översätt och dubba ljud eller video.",
     "stories": "Skapa scener med flera röster.",
@@ -1605,11 +1605,11 @@
     "back": "Tillbaka till Studio",
     "badge": "Kommersiell licens",
     "hero_title": "Ship AI-röster i produktion",
-    "hero_desc": "PakThai Studio är fri programvara med öppen källkod under GNU Affero General Public License v3 (AGPL-3.0) — gratis att använda, även för kommersiellt och internt företagsbruk. En kommersiell licens behövs bara om du vill bädda in PakThai Studio i en proprietär produkt eller tjänst med stängd källkod utan AGPL-3.0:s copyleft-skyldigheter. Vår licens omfattar koden i PakThai Studio. Rättigheter till modeller och genererat innehåll beror på de valda modellerna och deras villkor.",
+    "hero_desc": "VoiceStudio är fri programvara med öppen källkod under GNU Affero General Public License v3 (AGPL-3.0) — gratis att använda, även för kommersiellt och internt företagsbruk. En kommersiell licens behövs bara om du vill bädda in VoiceStudio i en proprietär produkt eller tjänst med stängd källkod utan AGPL-3.0:s copyleft-skyldigheter. Vår licens omfattar koden i VoiceStudio. Rättigheter till modeller och genererat innehåll beror på de valda modellerna och deras villkor.",
     "pricing_desc": "Nivåer och prissättning håller fortfarande på att slutföras.",
     "request_quote": "Begär en offert",
     "benefit_ip": "Programlicens",
-    "benefit_ip_desc": "Vår licens omfattar koden i PakThai Studio. Rättigheter till modeller och genererat innehåll beror på de valda modellerna och deras villkor.",
+    "benefit_ip_desc": "Vår licens omfattar koden i VoiceStudio. Rättigheter till modeller och genererat innehåll beror på de valda modellerna och deras villkor.",
     "benefit_cost": "Noll kostnad per minut",
     "benefit_cost_desc": "Inga API-räkningar, inga överraskande överskott. Körs på din egen hårdvara från dag ett.",
     "benefit_team_desc": "En licens täcker obegränsade användare inom din organisation.",
@@ -1617,7 +1617,7 @@
     "benefit_support_desc": "Prioriterad support för e-post och videosamtal från kärnteknikteamet.",
     "benefit_source_desc": "Full insyn i stapeln. Granska, fördela och anpassa inom licensvillkoren.",
     "benefit_lang_desc": "Transkribera, översätt och dubba på 646 språk med kvalitet på mänsklig nivå.",
-    "hero_simple": "PakThai Studio är gratis och öppen källkod enligt AGPL-3.0 – inklusive för kommersiellt och internt affärsbruk. Du behöver bara en kommersiell licens för att bädda in den i en produkt med sluten källkod utan AGPL:s copyleft-skyldigheter. Vår licens omfattar koden i PakThai Studio. Rättigheter till modeller och genererat innehåll beror på de valda modellerna och deras villkor."
+    "hero_simple": "VoiceStudio är gratis och öppen källkod enligt AGPL-3.0 – inklusive för kommersiellt och internt affärsbruk. Du behöver bara en kommersiell licens för att bädda in den i en produkt med sluten källkod utan AGPL:s copyleft-skyldigheter. Vår licens omfattar koden i VoiceStudio. Rättigheter till modeller och genererat innehåll beror på de valda modellerna och deras villkor."
   },
   "exportModal": {
     "export": "Exportera",

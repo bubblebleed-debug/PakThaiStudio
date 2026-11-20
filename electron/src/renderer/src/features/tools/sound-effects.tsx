@@ -164,7 +164,7 @@ export function SoundEffects() {
             <h3 className="text-sm font-medium">{t('sfx.result')}</h3>
             <SaveAudioButton
               url={apiPath(result.audio_url)}
-              suggestedName={`voicestudio-sfx-${result.id}.wav`}
+              suggestedName={`pakthai-sfx-${result.id}.wav`}
             />
           </div>
           <WaveformPlayer src={apiPath(result.audio_url)} source="sfx-result" height={40} />

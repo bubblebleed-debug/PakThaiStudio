@@ -92,6 +92,21 @@ class Direction:
                     terms.append(v)
         return ", ".join(terms)
 
+    def tts_instruct(self) -> str:
+        """Instruct terms the OmniVoice model can actually render.
+
+        The direction taxonomy (emotion, pace, energy...) is much wider than the
+        model's fixed instruct vocabulary; passing e.g. "quick" or "calm" makes
+        ``OmniVoice.generate`` raise ValueError and the whole dub segment fails.
+        Only intimacy=whispered has a model equivalent ("whisper"); pace and
+        energy are still honoured through ``rate_bias``.
+        """
+        terms: list[str] = []
+        for v in self.tokens.get("intimacy", []):
+            if v == "whispered" and "whisper" not in terms:
+                terms.append("whisper")
+        return ", ".join(terms)
+
     def translate_hint(self) -> str:
         """Sentence fragment suitable for Cinematic translator's reflect/adapt prompts."""
         if self.is_empty():

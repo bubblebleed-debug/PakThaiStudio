@@ -99,7 +99,7 @@
     "brand_by": "{{brand}} bởi",
     "all": "Tất cả",
     "allContributors": "Tất cả người đóng góp",
-    "title": "VoiceStudio.sh Mã nguồn mở",
+    "title": "PakThai Studio Mã nguồn mở",
     "design": "Thiết kế giọng nói từ mô tả.",
     "dub": "Dịch và lồng tiếng âm thanh hoặc video.",
     "stories": "Tạo cảnh với nhiều giọng nói.",
@@ -1605,11 +1605,11 @@
     "back": "Quay lại Studio",
     "badge": "Giấy phép thương mại",
     "hero_title": "Vận chuyển giọng nói AI trong quá trình sản xuất",
-    "hero_desc": "PakThai Studio là phần mềm tự do, mã nguồn mở theo giấy phép GNU Affero General Public License v3 (AGPL-3.0) — miễn phí sử dụng, bao gồm cả mục đích thương mại và sử dụng nội bộ doanh nghiệp. Bạn chỉ cần giấy phép thương mại nếu muốn nhúng PakThai Studio vào sản phẩm hoặc dịch vụ mã nguồn đóng hay độc quyền mà không chịu các nghĩa vụ copyleft của AGPL-3.0. Giấy phép của chúng tôi áp dụng cho mã nguồn PakThai Studio. Quyền đối với mô hình và đầu ra được tạo phụ thuộc vào mô hình đã chọn và các điều khoản của chúng.",
+    "hero_desc": "VoiceStudio là phần mềm tự do, mã nguồn mở theo giấy phép GNU Affero General Public License v3 (AGPL-3.0) — miễn phí sử dụng, bao gồm cả mục đích thương mại và sử dụng nội bộ doanh nghiệp. Bạn chỉ cần giấy phép thương mại nếu muốn nhúng VoiceStudio vào sản phẩm hoặc dịch vụ mã nguồn đóng hay độc quyền mà không chịu các nghĩa vụ copyleft của AGPL-3.0. Giấy phép của chúng tôi áp dụng cho mã nguồn VoiceStudio. Quyền đối với mô hình và đầu ra được tạo phụ thuộc vào mô hình đã chọn và các điều khoản của chúng.",
     "pricing_desc": "Các cấp độ và giá cả vẫn đang được hoàn thiện.",
     "request_quote": "Yêu cầu báo giá",
     "benefit_ip": "Giấy phép ứng dụng",
-    "benefit_ip_desc": "Giấy phép của chúng tôi áp dụng cho mã nguồn PakThai Studio. Quyền đối với mô hình và đầu ra được tạo phụ thuộc vào mô hình đã chọn và các điều khoản của chúng.",
+    "benefit_ip_desc": "Giấy phép của chúng tôi áp dụng cho mã nguồn VoiceStudio. Quyền đối với mô hình và đầu ra được tạo phụ thuộc vào mô hình đã chọn và các điều khoản của chúng.",
     "benefit_cost": "Không có chi phí mỗi phút",
     "benefit_cost_desc": "Không có hóa đơn API, không có tình trạng dư thừa bất ngờ. Chạy trên phần cứng của riêng bạn ngay từ ngày đầu tiên.",
     "benefit_team_desc": "Một giấy phép bao gồm số lượng người dùng không giới hạn trong tổ chức của bạn.",
@@ -1617,7 +1617,7 @@
     "benefit_support_desc": "Hỗ trợ qua email và cuộc gọi video ưu tiên từ nhóm kỹ thuật cốt lõi.",
     "benefit_source_desc": "Hiển thị đầy đủ vào ngăn xếp. Kiểm tra, phân nhánh và điều chỉnh theo các điều khoản cấp phép.",
     "benefit_lang_desc": "Phiên âm, dịch và lồng tiếng trên 646 ngôn ngữ với chất lượng ngang tầm con người.",
-    "hero_simple": "PakThai Studio là nguồn mở và miễn phí theo AGPL-3.0 — bao gồm cả mục đích sử dụng cho mục đích thương mại và nội bộ doanh nghiệp. Bạn chỉ cần giấy phép thương mại để nhúng nó vào sản phẩm nguồn đóng mà không có nghĩa vụ về bản quyền của AGPL. Giấy phép của chúng tôi áp dụng cho mã nguồn PakThai Studio. Quyền đối với mô hình và đầu ra được tạo phụ thuộc vào mô hình đã chọn và các điều khoản của chúng."
+    "hero_simple": "VoiceStudio là nguồn mở và miễn phí theo AGPL-3.0 — bao gồm cả mục đích sử dụng cho mục đích thương mại và nội bộ doanh nghiệp. Bạn chỉ cần giấy phép thương mại để nhúng nó vào sản phẩm nguồn đóng mà không có nghĩa vụ về bản quyền của AGPL. Giấy phép của chúng tôi áp dụng cho mã nguồn VoiceStudio. Quyền đối với mô hình và đầu ra được tạo phụ thuộc vào mô hình đã chọn và các điều khoản của chúng."
   },
   "exportModal": {
     "export": "Xuất khẩu",

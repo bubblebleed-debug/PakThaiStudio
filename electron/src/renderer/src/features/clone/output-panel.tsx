@@ -41,7 +41,7 @@ export function OutputPanel() {
             <SaveAudioButton
               url={result.audioPath ? audioUrl(result.audioPath) : undefined}
               mp3Url={result.audioPath ? audioMp3Url(result.audioPath) : undefined}
-              suggestedName={`voicestudio-${result.id ?? stamp}.wav`}
+              suggestedName={`pakthai-${result.id ?? stamp}.wav`}
             />
             <Button
               variant="ghost"

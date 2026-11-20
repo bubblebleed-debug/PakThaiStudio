@@ -206,7 +206,7 @@ export function TakeDetails({ item }: { item: HistoryItem }) {
           <SaveAudioButton
             url={audioUrl(item.audio_path)}
             mp3Url={audioMp3Url(item.audio_path)}
-            suggestedName={`voicestudio-${item.id}.wav`}
+            suggestedName={`pakthai-${item.id}.wav`}
             iconOnly
           />
         )}

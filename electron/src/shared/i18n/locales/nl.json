@@ -99,7 +99,7 @@
     "brand_by": "{{brand}} door",
     "all": "Allen",
     "allContributors": "Alle bijdragers",
-    "title": "VoiceStudio.sh Open source",
+    "title": "PakThai Studio Open source",
     "design": "Ontwerp een stem op basis van een beschrijving.",
     "dub": "Vertaal en dub audio of video.",
     "stories": "Maak scènes met meerdere stemmen.",
@@ -1605,11 +1605,11 @@
     "back": "Terug naar Studio",
     "badge": "Commerciële licentie",
     "hero_title": "Verzend AI-stemmen in productie",
-    "hero_desc": "PakThai Studio is vrije en open-source software onder de GNU Affero General Public License v3 (AGPL-3.0) — gratis te gebruiken, ook voor commercieel en intern zakelijk gebruik. Een commerciële licentie is alleen nodig als je PakThai Studio wilt inbouwen in een closed-source of propriëtair product of dienst zonder de copyleft-verplichtingen van de AGPL-3.0. Onze licentie geldt voor de code van PakThai Studio. Rechten op modellen en gegenereerde uitvoer hangen af van de gekozen modellen en hun voorwaarden.",
+    "hero_desc": "VoiceStudio is vrije en open-source software onder de GNU Affero General Public License v3 (AGPL-3.0) — gratis te gebruiken, ook voor commercieel en intern zakelijk gebruik. Een commerciële licentie is alleen nodig als je VoiceStudio wilt inbouwen in een closed-source of propriëtair product of dienst zonder de copyleft-verplichtingen van de AGPL-3.0. Onze licentie geldt voor de code van VoiceStudio. Rechten op modellen en gegenereerde uitvoer hangen af van de gekozen modellen en hun voorwaarden.",
     "pricing_desc": "Niveaus en prijzen worden nog afgerond.",
     "request_quote": "Vraag een offerte aan",
     "benefit_ip": "Applicatielicentie",
-    "benefit_ip_desc": "Onze licentie geldt voor de code van PakThai Studio. Rechten op modellen en gegenereerde uitvoer hangen af van de gekozen modellen en hun voorwaarden.",
+    "benefit_ip_desc": "Onze licentie geldt voor de code van VoiceStudio. Rechten op modellen en gegenereerde uitvoer hangen af van de gekozen modellen en hun voorwaarden.",
     "benefit_cost": "Geen kosten per minuut",
     "benefit_cost_desc": "Geen API-facturen, geen onverwachte overschrijdingen. Draait vanaf dag één op uw eigen hardware.",
     "benefit_team_desc": "Eén licentie geldt voor een onbeperkt aantal gebruikers binnen uw organisatie.",
@@ -1617,7 +1617,7 @@
     "benefit_support_desc": "Prioritaire e-mail- en videogesprekondersteuning van het kerntechnische team.",
     "benefit_source_desc": "Volledig zicht op de stapel. Audit, fork en pas aan binnen de licentievoorwaarden.",
     "benefit_lang_desc": "Transcribeer, vertaal en kopieer in 646 talen met kwaliteit op menselijk niveau.",
-    "hero_simple": "PakThai Studio is gratis en open-source onder AGPL-3.0 — ook voor commercieel en intern zakelijk gebruik. U hebt alleen een commerciële licentie nodig om het in een gesloten bronproduct in te sluiten, zonder de copyleft-verplichtingen van AGPL. Onze licentie geldt voor de code van PakThai Studio. Rechten op modellen en gegenereerde uitvoer hangen af van de gekozen modellen en hun voorwaarden."
+    "hero_simple": "VoiceStudio is gratis en open-source onder AGPL-3.0 — ook voor commercieel en intern zakelijk gebruik. U hebt alleen een commerciële licentie nodig om het in een gesloten bronproduct in te sluiten, zonder de copyleft-verplichtingen van AGPL. Onze licentie geldt voor de code van VoiceStudio. Rechten op modellen en gegenereerde uitvoer hangen af van de gekozen modellen en hun voorwaarden."
   },
   "exportModal": {
     "export": "Exporteren",
