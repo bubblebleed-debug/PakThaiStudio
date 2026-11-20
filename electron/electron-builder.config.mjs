@@ -101,6 +101,8 @@ export function distributionPackaging(target = DISTRIBUTION_TARGET) {
       // GitHub release downloads reject multi-range requests (HTTP 501), which
       // turns every patch download into a full one; see updater.ts.
       useMultipleRangeRequest: false,
+      // PakThai Studio: keep update downloads apart from an installed VoiceStudio.
+      updaterCacheDirName: 'pakthai-studio-updater',
     },
   };
 }
@@ -241,6 +243,8 @@ export default {
     oneClick: false,
     allowToChangeInstallationDirectory: true,
     perMachine: false,
+    installerSidebar: 'build/installerSidebar.bmp',
+    uninstallerSidebar: 'build/installerSidebar.bmp',
   },
   mac: {
     icon: 'build/icons/icon.icns',

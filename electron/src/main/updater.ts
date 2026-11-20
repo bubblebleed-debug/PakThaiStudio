@@ -981,7 +981,10 @@ export class DesktopUpdater {
       saveUpdatePrefs({ pendingVersion: this.state.availableVersion });
     this.installing = true;
     try {
-      autoUpdater.quitAndInstall(false, true);
+      // PakThai Studio: install silently. The assisted (non one-click) NSIS
+      // wizard otherwise opens behind other windows and waits for "Next"; if
+      // nobody clicks it the update never applies ("not-applied").
+      autoUpdater.quitAndInstall(true, true);
     } catch (error) {
       this.installing = false;
       saveUpdatePrefs({ pendingVersion: undefined });
